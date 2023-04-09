@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorJS</title>
+    <link rel="stylesheet" href="calculatorStyle.css">
+</head>
+
+<body>
+    <!--initially i just use the tag table to make all the display of calculator, and this includes the h1 "calculadora" and input text, it is inside a Thead tag, but when i am styling the document, Thead did not adopt some changes, so i put out all Thead elements and i created a new parent main tag to includes the table and this elements on a unicle box to style, some errors can be show up on you modify the viewport width -->
+    <main>
+        <table class="container">
+            <h1>Calculadora</h1>
+            <br>
+            <input type="text" id="input">
+            <tbody>
+                <tr>
+                    <td><button onclick="cleanner()">C</button></td>
+                    <td><button onclick="deleteValue()">del</button></td>
+                    <td><button onclick="insert('/')">/</button></td>
+                    <td><button onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td rowspan="2"><button onclick="result()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="insert('0')">0</button></td>
+                    <td><button onclick="insert('.')">.</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="calculatorScript.js"></script>
+</body>
+
+</html>
